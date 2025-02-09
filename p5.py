@@ -30,7 +30,6 @@ def recognize_speech():
         return None
 
 def generate_response(prompt):
-    """Generate AI-based response using Google Gemini AI."""
     try:
         model = genai.GenerativeModel("gemini-pro")
         response = model.generate_content(prompt)
@@ -39,7 +38,6 @@ def generate_response(prompt):
         print("Error:", e)
         return "Sorry, I am unable to generate a response right now."
 
-# Main function
 def ai_assistant():
     user_input = recognize_speech()
     if user_input:
